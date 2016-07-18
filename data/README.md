@@ -1,0 +1,2 @@
+# DATA: Sonoran Desert winter annuals from the Desert Laboratory, Tucson AZ
+Data come from annual censuses of winter annuals in Tucson, AZ. Data are freely available on Ecological Archives: http://www.eebweb.arizona.edu/faculty/venable/LTREB/metadata.htm
