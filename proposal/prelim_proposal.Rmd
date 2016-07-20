@@ -1,0 +1,48 @@
+---
+bibliography: ~/Dropbox/Bibliography/CoexistStability.bib
+csl: components/ecology.csl
+fontsize: 11pt
+geometry: margin=1in
+header-includes:
+- \usepackage{todonotes}
+- \usepackage{rotating}
+- \usepackage{color, soul}
+layout: 12pt
+linkcolor: black
+output:
+  pdf_document:
+    fig_caption: yes
+    keep_tex: no
+urlcolor: black
+---
+
+\begin{center}
+\textbf{\large{Preliminary Proposal: New theory and field-experimental tests to understand the interactions among diversity, stability, and species coexistence}}
+\end{center}
+
+## Intellectual Merit
+Coincident with directional climate change, climate variability is also projected increase in the future.
+Thus, the temporal stability of ecosystem functioning is likely to decline in ecosystems where annual production is tightly linked to climatic conditions.
+
+
+## Broader Impacts
+
+\newpage{}
+
+# PERSONNEL
+
+## Key personnel
+
+Name | Role | Institution | Role Description
+-------------- | -- | --------------------- | -----------------------------------------
+Peter B. Adler | PI | Utah State University | Will oversee the entire project 
+Andrew T. Tredennick | Co-PI | Utah State University | Will manage and conduct proposed activities
+
+
+## All other personnel
+
+Name | Role | Institution | Role Description
+-------------- | -- | --------------------- | -----------------------------------------
+NAME | XX | XX | XX
+
+\newpage{}
