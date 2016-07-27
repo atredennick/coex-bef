@@ -40,9 +40,9 @@ single_spp_data <- subset(species_year_data, species==do_species)
 ####
 single_spp_data <- subset(single_spp_data, germ.fraction!="." & lxbx!=".")
 seeds_per_seedling_vec <- as.numeric(as.character(single_spp_data$lxbx))
-seed_surv_new <- 0.153
-seed_surv_old <- 0.56
-nongerm_seed_surv <- 0.823
+seed_surv_new <- 0.153 # from Gremer and Veneble 2014
+seed_surv_old <- 0.56 # from Gremer and Veneble 2014
+nongerm_seed_surv <- 0.823 # from Gremer and Veneble 2014
 germination_frac_vec <- as.numeric(as.character(single_spp_data$germ.fraction))
 iters <- 1000
 pgr <- numeric(iters)
@@ -68,6 +68,11 @@ for(germ in germ_fracs){
   count <- count+1
 }
 
+
+
+####
+####  PLOT SOME RESULTS
+####
 par(mfrow=c(1,2))
 plot(germ_fracs, geom_mean, type="l", main=do_species)
 plot(germ_fracs, arith_mean, type="l", main=do_species)

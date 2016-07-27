@@ -7,6 +7,9 @@ header-includes:
 - \usepackage{todonotes}
 - \usepackage{rotating}
 - \usepackage{color, soul}
+- \usepackage{wrapfig}
+- \usepackage[font=sf, size=small]{caption}
+- \usepackage[font=sf]{floatrow}
 layout: 12pt
 linkcolor: black
 output:
@@ -17,12 +20,24 @@ urlcolor: black
 ---
 
 \begin{center}
-\textbf{\large{Preliminary Proposal: New theory and field-experimental tests to understand the interactions among diversity, stability, and species coexistence}}
+\textbf{\large{Preliminary Proposal: SG: New theory and empirical tests to understand the interactions among diversity, stability, and species coexistence}}
 \end{center}
 
 ## Intellectual Merit
-Coincident with directional climate change, climate variability is also projected increase in the future.
-Thus, the temporal stability of ecosystem functioning is likely to decline in ecosystems where annual production is tightly linked to climatic conditions.
+The nestedness of ecological systems (communities within ecosystems, populations within communities) challenges our ability to predict the consequences of global environmental change because impacts at one heirarchical level are not independent of impacts at another.
+Understanding how projected increases in climate variability will impact the stability of ecosystem functioning offers a compelling example.
+Increased climate variability will decrease the temporal stability of ecosystem functions like annual primary productivity, but more diverse ecosystems should experience weaker declines in stability.
+But, climate variability also has an independent effect on species coexistence, which maintains diversity.
+Depending on whether species coexistence is fluctuation-dependent or fluctuation-independent, increased climate variability could increase or decrease local species richness.
+Thus, the effect of climate variability on species coexistence could exacerbate or alleviate the direct effect of climate variability on ecosystem stability.
+
+To fully understand how ecosystem stability emerges from climate variability and species richness requires updated theory and new empirical tests.
+We propose to develop new quantitative theory that integrates coexistence theory and biodiversity-ecosystem functioning theory.
+In so doing, we will generate testable predictions for the impact of increased climate variability on the stability of ecosystem functioning in systems where species coexistence depends on environmental variability.
+We will then test our predictions in a model system of winter annual plants in the Sonoran Desert.
+
+
+
 
 
 ## Broader Impacts
@@ -35,8 +50,8 @@ Thus, the temporal stability of ecosystem functioning is likely to decline in ec
 
 Name | Role | Institution | Role Description
 -------------- | -- | --------------------- | -----------------------------------------
-Peter B. Adler | PI | Utah State University | Will oversee the entire project 
-Andrew T. Tredennick | Co-PI | Utah State University | Will manage and conduct proposed activities
+NAME | PI | AFFILIATION | Will oversee the entire project 
+Andrew T. Tredennick | Co-PI | Utah State University | Postdoctoral researcher
 
 
 ## All other personnel
@@ -46,3 +61,68 @@ Name | Role | Institution | Role Description
 NAME | XX | XX | XX
 
 \newpage{}
+
+1. Background
+----------
+The nestedness of ecological systems implies that feedbacks among hierachical components are important for understanding and predicting the consequences of global environmental change.
+A hierarchical perspective was especially important for understanding the link between ecosystem diversity (species richness) and the temporal stability of ecosystem functioning.
+Indeed, the debate over whether diversity increased or decreased stability was not resolved, theoretically, until researchers discovered that increased richness increases population variability but decreases community variability through time.
+
+
+\begin{wrapfigure}[23]{r}{0.45\textwidth}
+  \centering
+     \includegraphics[height=2in]{../figures/coex-bef_concept-01.png}
+  \caption{An integrated theory to understand the net effect of environmental variability on ecosystem stability. Coexistence theory (in orange bubble) has focused on how environmental variability can maintain diversity by stabilizing species coexistence, while diversity-stability theory (in blue bubble) has focused on the effect of species richness on ecosystem stability. In combination, environmental variability will decrease ecosystem stability, but it may also increase species richness, which can then increase ecosystem stability. We propose new theory and empirical tests to understand the full effect of environmental variability when it also promotes diversity (purple lines and question mark).}
+\end{wrapfigure}
+
+More text here...
+
+2. Rationale, Objectives, and Significance
+---------------------------------------
+Understanding the capacity of ecosystems to withstand environmental fluctuations has taken on new relevance because climate variability is projected to increase.
+Considerable progress has been made over the last two decades in identifying the mechanisms by which diversity confers temporal stability.
+In particular, species-specific responses to environmental conditions through time can create asynchrounous dynamics that act to stabilize aggregate ecosystem properties.
+Species-specific responses to environmental conditions is also a key ingredient for species coexistence in fluctuating environments, but virtually all research on the diversity-stability relationship assumes coexistence is fluctuation-independent.
+Doing so assumes no interaction between environmental variability and species richness, which has allowed researchers to isolate the effect of richness *per se*.
+Thus, the implicit assumption is that environmental variability will always reduce ecosystem stability.
+We propose to advance our understanding of how diversity stabilizes ecosystem functioning by developing quantitative theory that explicitly links species coexistence, environmental variability, and ecosystem stability (Fig. 1).
+We will confront predictions from our new theory with empirical tests using population models paramaterized with long term demographic data from a system where fluctuation-dependent coexistence maintains diversity.
+
+3. Research Plan
+-------------
+#### Quantitative Theory
+We will use a general consumer-resource model that allows species coexistence by fluctuation-independent (resource partitioning) and fluctuation-dependent (storage effect, relative nonlinearity) mechanisms.
+Preliminary results from numerical simulations of the model suggest that environmental variability can promote species richness and increase ecosystem variability (Fig. 2).
+Our proposed work will take the next logical step by using the model to generate quantitative predictions for the magnitude and direction of change in ecosystem stability when environmental variability is increased.
+We will also use the model to partition the direct effect of environmental variability on ecosystem variability and its indirect effect via its influence on species coexistence.
+
+\begin{wrapfigure}[17]{r}{0.3\textwidth}
+  \centering
+     \includegraphics[height=2in]{../figures/prelim_theory.png}
+  \caption{A positive relationship between ecosystem variability and species richness emerges from our theoretical model when we allow environmental variability to dertermine the number of species present (shown in inset, where $\sigma^2_E$ is the environmental variance).}
+\end{wrapfigure}
+
+#### Empirical Tests
+Winter annual plant communities in the Sonoran Desert offer an ideal model system for testing predictions from our theoretical model.
+
+
+4. Research Questions
+------------------
+**Question 1: Can gains in species richness compensate for the direct of effect of environmental variability on ecosystem stability?** We will use our theoretical model to run simulations...
+
+**Question 2: Will increasing environmental variability increase or decrease ecosystem stability in natural plant communities where fluctuation-dependent coexistence is important?** We will use an annual plant model parameterized with long term data from the Sonoran Desert winter annual community to perform simulation experiments. 
+To understand how increasing environmental variability will affect stability, we will use the model to simulate the opposite: what happens when we reduce environmental variability? 
+In our focal system, reducing environmental variability should cause some species to go extinct, which should reduce ecosystem stability.
+At the same time, reducing environmental variability should cause ecosystem stability to increase.
+We will reduce environmental variability by constraining the distributions of model parameters from which yearly parameters are drawn (Fig. 3).
+We will use simulation results to quantify the direct effect of environmental variability on ecosystem stability, as well as its indirect effect via species coexistence (Fig. 3).
+We already have most of the information we need to parameterize the annual plant model, but we will need to harvest biomass for our focal species to calculate the average biomass by species so we can estimate annual productivity from our model.
+
+5. Broader Impacts
+------------------
+The broader impacts of this proposal focus on training.
+Co-PI Tredennick will develop a short course for UC Davis graduate students on data-model assimilation.
+We will use the data and models from our proposed research as examples in the course material.
+The course material will be hosted on GitHub so that students and faculty at other institutions can implement a similar short course.
+The short course therefore serves two goals: (1) Co-PI and postdoc Tredennick will gain experience developing and teaching graduate-level courses and (2) the wider ecological community will have a new resource for graduate training in contemporary approachs to confronting models with data.
+
