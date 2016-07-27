@@ -23,6 +23,8 @@ urlcolor: black
 \textbf{\large{Preliminary Proposal: SG: New theory and empirical tests to understand the interactions among diversity, stability, and species coexistence}}
 \end{center}
 
+\setcounter{page}{0}
+
 ## Intellectual Merit
 The nestedness of ecological systems (communities within ecosystems, populations within communities) challenges our ability to predict the consequences of global environmental change because impacts at one heirarchical level are not independent of impacts at another.
 Understanding how projected increases in climate variability will impact the stability of ecosystem functioning offers a compelling example.
@@ -72,7 +74,7 @@ Indeed, the debate over whether diversity increased or decreased stability was n
 \begin{wrapfigure}[23]{r}{0.45\textwidth}
   \centering
      \includegraphics[height=2in]{../figures/coex-bef_concept-01.png}
-  \caption{An integrated theory to understand the net effect of environmental variability on ecosystem stability. Coexistence theory (in orange bubble) has focused on how environmental variability can maintain diversity by stabilizing species coexistence, while diversity-stability theory (in blue bubble) has focused on the effect of species richness on ecosystem stability. In combination, environmental variability will decrease ecosystem stability, but it may also increase species richness, which can then increase ecosystem stability. We propose new theory and empirical tests to understand the full effect of environmental variability when it also promotes diversity (purple lines and question mark).}
+  \caption{An integrated theory to understand the net effect of environmental variability on ecosystem stability. Coexistence theory (in orange bubble) has focused on how environmental variability can maintain diversity by stabilizing species coexistence, while diversity-stability theory (in blue bubble) has focused on the effect of species richness on ecosystem stability. In combination, environmental variability will decrease ecosystem stability, but it may also increase species richness, which can then increase ecosystem stability. We propose new theory and empirical tests to understand the full effect of environmental variability when it also promotes diversity.}
 \end{wrapfigure}
 
 More text here...
@@ -117,6 +119,12 @@ At the same time, reducing environmental variability should cause ecosystem stab
 We will reduce environmental variability by constraining the distributions of model parameters from which yearly parameters are drawn (Fig. 3).
 We will use simulation results to quantify the direct effect of environmental variability on ecosystem stability, as well as its indirect effect via species coexistence (Fig. 3).
 We already have most of the information we need to parameterize the annual plant model, but we will need to harvest biomass for our focal species to calculate the average biomass by species so we can estimate annual productivity from our model.
+
+\begin{figure}[!ht]
+  \centering
+      \includegraphics[width=5in]{../figures/proposal_methods.png}
+  \caption{Workflow of our proposed approach.}
+\end{figure}
 
 5. Broader Impacts
 ------------------
