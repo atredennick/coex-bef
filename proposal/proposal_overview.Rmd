@@ -1,0 +1,51 @@
+---
+title: "Understanding whether environmental variability will increase or decrease ecosystem stability when species coexist via the storage effect"
+subtitle: \textsf{Overview of a "small grant" preliminary preposal to be submitted to NSF January 2017}
+author: "Andrew Tredennick"
+date: \today
+output: pdf_document
+header-includes:
+- \usepackage{todonotes}
+- \usepackage{rotating}
+- \usepackage{color, soul}
+- \usepackage{wrapfig}
+- \usepackage[font=sf, size=small]{caption}
+- \usepackage[font=sf]{floatrow}
+---
+
+--------------------
+ 
+Extreme climate events are expected to increase in frequency worldwide (Stocker *et al.* 2013), which will increase the interannual variability of environmental conditions.
+A fundamental challenge for ecology is to predict the impacts of increasingly variable environmental conditions on the stability of ecosystem functioning through time.
+It is now becoming clear that biodiversity (species richness) buffers ecosystems against environmental fluctuations (de Mazancourt *et al.* 2013) and extreme weather events (Isbell *et al.* 2015).
+What remains unclear is if increasing environmental variability will necessarily cause reductions in ecosystem stability.
+This lack of clarity exists because contemporary theory on the biodiversity-stability relationship has ignored the possibility for an interaction between environmental variability and biodiversity -- an interaction that has been hiding in plain sight in the coexistence literature.
+
+\begin{wrapfigure}[25]{r}{0.45\textwidth}
+  \centering
+     \includegraphics[height=2in]{../figures/coex-bef_concept-01.png}
+  \caption{An integrated theory to understand the net effect of environmental variability on ecosystem stability. Coexistence theory (in orange bubble) has focused on how environmental variability can maintain diversity by stabilizing species coexistence, while diversity-stability theory (in blue bubble) has focused on the effect of species richness on ecosystem stability. In combination, environmental variability will decrease ecosystem stability, but it may also increase species richness, which can then increase ecosystem stability. We propose empirical tests to understand the full effect of environmental variability when it also promotes diversity.}
+\end{wrapfigure}
+
+Theoretical (Chesson 2000) and empirical (Angert *et al.* 2009) work has identified temporally fluctuating environmental conditions as an important ingredient for stable species coexistence.
+Such "fluctuation-dependent" coexistence (Chesson 2000) requires that species have unique environmental responses and that environmental conditions vary enough for each coexisting species to experience good and bad conditions.
+Thus, there is reason to expect environmental variability to promote species richness when coexistence is maintained by a fluctuation-dependent mechanism (Adler and Drake 2008).
+The countervailing effects of environmental variability present an interesting paradox: increasing variability should decrease ecosystem stability, but may also increase richness, which may offset the decrease in stability (Fig. 1).
+Such a paradox complicates predictions about how ecosystems will respond as environmental conditions exceed historical ranges of variability because we do not know the net effect of environmental variability on ecosystem stability when species coexistence is fluctuation-dependent.
+
+Recent theory (Tredennick *et al.* in prep.) has identified the potential for increasing environmental to actual cause an increase, rather than a decrease, in ecosystem stability when species coexist via the storage effect.
+This potential exists because the benefit accrued by adding a new species to the community, a species that can only coexist once the environment became more variable, is greater than the cost incurred by increasing fluctuations of species' abundances.
+However, the net effect of environmental variability on ecosystem stability is highly dependent on parameter values that reflect species-specific traits.
+Therefore, whether environmental variability has the potential to increase ecosystem stability in real ecosystems remains unknown.
+
+We propose to overcome this knowledge gap by testing theory on the interactions among environmental variability, species coexistence, and ecosystem stability in a model system of winter desert annuals at the University of Arizona's Desert Laboratory (Venable and Kimball 2013).
+This system is ideal for our purposes because (1) data has been collected for over 20 years, providing a rich time series for parameterizing annual plant models (Gremer *et al.* 2014, 2016), and (2) there is overwhelming evidence that the storage effect is responsible for maintaining species coexistence in this system (Angert *et al.* 2009).
+We will use the data set to paramaterize stochastic multi-species population models, which we can then use to test the following hypotheses.
+
+### Hypotheses
+1. *Decreasing environmental variability will cause ecosystem stability to decrease, not increase.* Decreasing environmental variability will cause some species to go extinct, and the loss of the stabilizing effect of species richness will swamp out any direct effect of environmental variability on ecosystem stability
+
+2. *The magnitude of change in ecosystem stability as environmental variability decreases will depend on the traits of the species that are lost from the community.* Coexistence in this community can be attributed to functional trade-offs that manifest themselves through time (Angert *et al.* 2009). As environmental variability decreases, large infrequent precipitation events that favor species with high relative growth rates will become rarer. Thus, the environment will tend to favor "stable" species with high water-use efficiency. 
+
+
+
