@@ -14,7 +14,9 @@ header-includes:
 ---
 
 --------------------
- 
+
+## Introduction
+
 Extreme climate events are expected to increase in frequency worldwide (Stocker *et al.* 2013), which will increase the interannual variability of environmental conditions.
 A fundamental challenge for ecology is to predict the impacts of increasingly variable environmental conditions on the stability of ecosystem functioning through time.
 It is now becoming clear that biodiversity (species richness) buffers ecosystems against environmental fluctuations (de Mazancourt *et al.* 2013) and extreme weather events (Isbell *et al.* 2015).
@@ -39,13 +41,37 @@ However, the net effect of environmental variability on ecosystem stability is h
 Therefore, whether environmental variability has the potential to increase ecosystem stability in real ecosystems remains unknown.
 
 We propose to overcome this knowledge gap by testing theory on the interactions among environmental variability, species coexistence, and ecosystem stability in a model system of winter desert annuals at the University of Arizona's Desert Laboratory (Venable and Kimball 2013).
-This system is ideal for our purposes because (1) data has been collected for over 20 years, providing a rich time series for parameterizing annual plant models (Gremer *et al.* 2014, 2016), and (2) there is overwhelming evidence that the storage effect is responsible for maintaining species coexistence in this system (Angert *et al.* 2009).
-We will use the data set to paramaterize stochastic multi-species population models, which we can then use to test the following hypotheses.
+This system is ideal for our purposes because (1) data has been collected for over 20 years, providing a rich time series for parameterizing annual plant models (Gremer & Venable 2014, Gremer *et al.* 2016), and (2) there is overwhelming evidence that the storage effect is responsible for maintaining species coexistence in this system (Angert *et al.* 2009).
+We will use the data set to paramaterize stochastic multi-species population models, which we can then use to test theoretical predictions.
 
-### Hypotheses
+Environmental variability is incorporated in annual plant models based on these data as year-specific germination rates (Gremer & Venable 2014).
+Therefore, for each species we can empirically estimate a distribution of yearly germination rates.
+With the distribution of yearly germination rates in hand, we can increase or decrease the variance of that distribution to alter environmental variability.
+However, in this study we will only decrease environmental variability because we are interested in how changes in the number of species in a community due to environmental variability affects ecosystem stability.
+We cannot model the addition of unknown species due to increases in environmental variability, but we can model the loss of known species due to decreases in environmental variability.
+
+## Predictions
+We will use our empirically-based, multi-species population models to test the following theoretical predictions:
+
 1. *Decreasing environmental variability will cause ecosystem stability to decrease, not increase.* Decreasing environmental variability will cause some species to go extinct, and the loss of the stabilizing effect of species richness will swamp out any direct effect of environmental variability on ecosystem stability
 
 2. *The magnitude of change in ecosystem stability as environmental variability decreases will depend on the traits of the species that are lost from the community.* Coexistence in this community can be attributed to functional trade-offs that manifest themselves through time (Angert *et al.* 2009). As environmental variability decreases, large infrequent precipitation events that favor species with high relative growth rates will become rarer. Thus, the environment will tend to favor "stable" species with high water-use efficiency. 
 
+## Methods overview
 
+### The model
+Following Gremer & Venable (2014) and Gremer et al. (2016), we will parameterize population models for common species ($n \approx 12$) in the data set.
+Specifically, we will fit a density-dependent annual plant model for each species *i* that trcaks the abundance of seeds ($N$) through time ($t$):
+
+\begin{align}
+N_i(t+1) = s_i[1-g_i(t)]N_i(t) + \frac{\lambda_i g_i(t)N_i(t)}{1 + \alpha_{ii}g_i(t)N_i(t) + \sum\limits_{j=1}^n{\alpha_{ij}g_j(t)N_j(t)}}
+\end{align}
+
+Past modeling efforts with these data have included estimates of intraspecific competition (Gremer & Venable 2014), but interspecific competition has not been estimated.
+Therefore, we will constrain our modeling efforts to species that commonly co-occur in a sufficient number of plots and years so we can use natural variability among the plots to estimate interspecific competition.
+Without the effects of interspecific competition, species would not be competitively excluded when environmental variability decreases because the communities would exhibit neutral dynamics (Adler *et al.* 2007).
+We recognize that we may only be able to fit the model in equation 1 for a small subset of species due to data limiations.
+Fortunately, we will be able to test the theoretical predictions of Tredennick *et al.* (in prep.) with as few as four species.
+
+### Simulations
 
