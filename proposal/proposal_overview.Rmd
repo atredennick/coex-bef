@@ -53,9 +53,9 @@ We cannot model the addition of unknown species due to increases in environmenta
 ## Predictions
 We will use our empirically-based, multi-species population models to test the following theoretical predictions:
 
-1. *Decreasing environmental variability will cause ecosystem stability to decrease, not increase.* Decreasing environmental variability will cause some species to go extinct, and the loss of the stabilizing effect of species richness will swamp out any direct effect of environmental variability on ecosystem stability
+1. *Decreasing environmental variability will cause ecosystem stability to increase, not decrease.* Decreasing environmental variability will cause some species to go extinct, and the loss of the stabilizing effect of species richness will swamp out any direct effect of environmental variability on ecosystem stability. 
 
-2. *The magnitude of change in ecosystem stability as environmental variability decreases will depend on the traits of the species that are lost from the community.* Coexistence in this community can be attributed to functional trade-offs that manifest themselves through time (Angert *et al.* 2009). As environmental variability decreases, large infrequent precipitation events that favor species with high relative growth rates will become rarer. Thus, the environment will tend to favor "stable" species with high water-use efficiency. 
+2. *The magnitude of change in ecosystem stability as environmental variability decreases will depend on the traits of the species that are lost from the community.* Coexistence in this community can be attributed to functional trade-offs that manifest themselves through time (Angert *et al.* 2009). As environmental variability decreases, large infrequent precipitation events that favor species with high relative growth rates will become rarer. Thus, more constant environments, as simulated through a reduction in the variance around mean germination rates, will tend to favor "stable" species with high water-use efficiency. 
 
 ## Methods overview
 
@@ -67,11 +67,17 @@ Specifically, we will fit a density-dependent annual plant model for each specie
 N_i(t+1) = s_i[1-g_i(t)]N_i(t) + \frac{\lambda_i g_i(t)N_i(t)}{1 + \alpha_{ii}g_i(t)N_i(t) + \sum\limits_{j=1}^n{\alpha_{ij}g_j(t)N_j(t)}}
 \end{align}
 
+where *N(t)* is the abundance of seeds at time *t*, *s* is seed survival, $\lambda$ is per capita fecundity, *g(t)* is the year-specific germination rate, $\alpha_{ii}$ is the intraspecific competition coefficient, and $\alpha_{ij}$ is the intraspecific competition coefficient. 
+Environmental variability is included through the time-varying germination fraction.
+
 Past modeling efforts with these data have included estimates of intraspecific competition (Gremer & Venable 2014), but interspecific competition has not been estimated.
 Therefore, we will constrain our modeling efforts to species that commonly co-occur in a sufficient number of plots and years so we can use natural variability among the plots to estimate interspecific competition.
 Without the effects of interspecific competition, species would not be competitively excluded when environmental variability decreases because the communities would exhibit neutral dynamics (Adler *et al.* 2007).
 We recognize that we may only be able to fit the model in equation 1 for a small subset of species due to data limiations.
 Fortunately, we will be able to test the theoretical predictions of Tredennick *et al.* (in prep.) with as few as four species.
 
-### Simulations
+We will use the parameterized model to simulate communities under different levels of environmental variability.
+At each level of environmental variability we will calculate species richness and the variance of total community seed abundance.
+Biodiversity-stability studies typically focus on biomass production (e.g., Tilman *et al.* 2006), but our long-term data does not include estimates of individual, species, or community level biomass.
+Therefore, we will focus on the coefficient of variation through time of seed abundance.
 
