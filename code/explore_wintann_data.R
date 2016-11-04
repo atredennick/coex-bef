@@ -46,7 +46,7 @@ census_data$species <- tolower(census_data$species)
 
 # Summarise data to get average abundance per year
 abund_per_plot <- ddply(census_data, .(Year, plot.habitat.replicate, species), summarise,
-                        abundance = length(seeds))
+                        abundance = length(which(seeds!=-99)))
 avg_abundance <- ddply(abund_per_plot, .(Year, species), summarise,
                        mean_abundance = mean(abundance))
 
