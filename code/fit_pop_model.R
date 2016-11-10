@@ -3,6 +3,7 @@
 
 rm(list=ls(all.names = TRUE))
 
+VERBOSE <- FALSE
 
 
 ####
@@ -47,31 +48,28 @@ model{
   
   #### Fixed Effects Priors
   surv ~ dunif(0,1)
-  lambda ~ dunif(1,100)
-  alpha ~ dnorm(0,0.001)
-  for(t in 1:yrs){
-    germ[t] ~ dunif(0,1)
-  }
+  lambda ~ dunif(0,100)
+  alpha ~ dunif(0,10)
+  germ ~ dunif(0,1)
   
   #### Initial Conditions
   N0 ~ dunif(1,10)
-  Nmed[1] <- log(max(1, (surv*(1-germ[1])*N0 + lambda*germ[1]*N0) / (1+alpha*germ[1]*N0)))
+  Nmed[1] <- log(max(1, (surv*(1-germ)*N0 + ((lambda*germ*N0) / (1+alpha*germ*N0)) )))
   N[1] ~ dlnorm(Nmed[1], tau_proc)
 
   ####  Process Model
   for(t in 2:yrs){
-    Nmed[t] <- log(max(1, (surv*(1-germ[t-1])*N[t-1] + lambda*germ[t-1]*N[t-1]) / (1+alpha*germ[t-1]*N[t-1])))
+    Nmed[t] <- log(max(1, (surv*(1-germ)*N[t-1] + ((lambda*germ*N[t-1]) / (1+alpha*germ*N[t-1]))  )))
     N[t] ~ dlnorm(Nmed[t], tau_proc)
   }
   
   ####  Data Model
   var.o <- sigma.o*sigma.o
   for(t in 1:yrs){
-#     shape[t] <- N[t]*N[t]/var.o
-#     rate[t] <- N[t]/var.o
-#     lambda2[t] ~ dgamma(shape[t], rate[t])
-#     Nobs[t] ~ dpois(lambda2[t])
-    Nobs[t] ~ dpois(N[t])
+    shape[t] <- N[t]*N[t]/var.o
+    rate[t] <- N[t]/var.o
+    lambda2[t] ~ dgamma(shape[t], rate[t])
+    Nobs[t] ~ dpois(lambda2[t])
   }
 
 }"
@@ -111,7 +109,8 @@ prediction_df      <- data.frame(year = fitting_dat$year,
                                  median_prediction = median_predictions,
                                  upper_prediction = upper_predictions,
                                  lower_prediction = lower_predictions)
-plot(fitted_model$params)
+if(VERBOSE){ plot(fitted_model$params) }
+
 
 
 ####
