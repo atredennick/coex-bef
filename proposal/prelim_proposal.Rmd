@@ -79,6 +79,7 @@ Winter annual plant communities in the Sonoran Desert offer an ideal model syste
 
 \noindent{}\textbf{4. Broader Significance.}
 The broader impacts of this proposal focus on training.
+First, the grant will support the postdoctoral training of an early career scientist, Andrew Tredennick (the Co-PI).
 Co-PI Tredennick will develop a short course for graduate students at the University of Arizona on data-model assimilation.
 We will use the data and models from our proposed research as examples in the course material.
 The course material will be hosted on \textsc{GitHub} so that students and faculty at other institutions can implement a similar short course.
