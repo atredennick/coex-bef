@@ -8,7 +8,7 @@ header-includes:
 - \usepackage{rotating}
 - \usepackage{color, soul}
 - \usepackage{wrapfig}
-- \usepackage[size=small]{caption}
+- \usepackage[size=footnotesize]{caption}
 - \usepackage{floatrow}
 - \usepackage{tgtermes}
 layout: 11pt
@@ -46,18 +46,21 @@ Temporal environmental variation permeates through all levels of ecological syst
 It can drive the evolution of traits and species, determine the viability of populations, allow species to coexist, and impact the stability of ecosystem functioning.
 Yet, rarely are the impacts of environmental fluctuations at one level of organization explicitly accounted for in the processes that occur at other levels.
 For example, despite rapid theoretical and empirical progress in the fields of species coexistence and biodiversity-ecosystem functioning (BEF) over the last 20 years, research on the two topics remains separate.
-Such separation limits our ability to predict how ecosystems might respond to projected increases in environmental variability.
+Consequently, we lack a satisifactory answer to a fundamental question of applied relevance: \emph{How will ecosystem stability respond to increasing environmental variability?}
 
-How will ecosystem stability respond to increasing environmental variability?
 An intuitive prediction is that ecosystem functioning will become less stable as environmental variability increases.
-Such a prediction stems from two established facts.
+Such a prediction stems from two lines of evidence.
 First, increasing environmental variability will cause species' abundances to fluctuate more through time, assuming their growth depends on some set of environmental drivers.
 Second, low-abundance species are more likely to go extinct as environmental variability increases.
 Given the well-supported positive relationship between diversity and ecosystem stability, species losses will cause ecosystems to become more variable.
 
 A less intuitive prediction is that ecosystem functioning will neither increase nor decrease in stability as environmental variability increases.
-This prediction still assumes that species' abundances will fluctuate more as environmental variability increases, but such increases in variability are compensated for by species additions.
-Species additions occur because species coexistence is promoted by environmental variability, so-call fluctuation-dependent species coexistence.
+This prediction still assumes that species' abundances will fluctuate more as environmental variability increases, but those increases are compensated for by species additions (Tredennick et al. in review).
+Species additions occur because species coexistence is promoted by environmental variability.
+Thus, this competing prediction is conditional on species coexistence being fluctuation-dependent.
+
+Fluctuation-depedent coexistence comes in two flavors: the storage effect and relative nonlinearity.
+
 
 
 \begin{wrapfigure}[23]{r}{0.45\textwidth}
@@ -68,10 +71,10 @@ Species additions occur because species coexistence is promoted by environmental
 
 More text here...
 
-\noindent{}\textbf{2. Advancing Theory Connecting Coexistence and Ecosystem Stability.}
+\noindent{}\textbf{2. Advancing Theory to Link Coexistence and Ecosystem Stability.}
 New theory .... storage effect only .... annual plant specific
 
-\noindent{}\textbf{3. Empirically Testing New Theory.}
+\noindent{}\textbf{3. Testing New Theory with Empirically-Based Models.}
 Winter annual plant communities in the Sonoran Desert offer an ideal model system for testing predictions from our theoretical model.
 
 \noindent{}\textbf{4. Broader Significance.}
