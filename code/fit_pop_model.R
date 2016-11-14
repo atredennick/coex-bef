@@ -48,18 +48,22 @@ model{
   
   #### Fixed Effects Priors
   surv ~ dunif(0,1)
-  lambda ~ dunif(0,100)
+  # lambda ~ dunif(0,100)
   alpha ~ dunif(0,10)
-  germ ~ dunif(0,1)
+  for(t in 1:yrs){
+    germ[t] ~ dunif(0,1)
+    lambda[t] ~ dunif(0,100)
+  }
+  # germ ~ dunif(0,1)
   
   #### Initial Conditions
   N0 ~ dunif(1,10)
-  Nmed[1] <- log(max(1, (surv*(1-germ)*N0 + ((lambda*germ*N0) / (1+alpha*germ*N0)) )))
+  Nmed[1] <- log(max(1, (surv*(1-germ[1])*N0 + ((lambda[1]*germ[1]*N0) / (1+alpha*germ[1]*N0)) )))
   N[1] ~ dlnorm(Nmed[1], tau_proc)
 
   ####  Process Model
   for(t in 2:yrs){
-    Nmed[t] <- log(max(1, (surv*(1-germ)*N[t-1] + ((lambda*germ*N[t-1]) / (1+alpha*germ*N[t-1]))  )))
+    Nmed[t] <- log(max(1, (surv*(1-germ[t])*N[t-1] + ((lambda[t]*germ[t]*N[t-1]) / (1+alpha*germ[t]*N[t-1]))  )))
     N[t] ~ dlnorm(Nmed[t], tau_proc)
   }
   
@@ -86,7 +90,7 @@ out_variables <- c("germ","surv","lambda","sigma_proc","N","alpha")
 
 ##  Send to JAGS
 mc3     <- jags.model(file=textConnection(ann_pop_model), data=mydat, n.chains=3)
-mc3_out <- coda.samples(model=mc3, variable.names=out_variables, n.iter=5000)
+mc3_out <- coda.samples(model=mc3, variable.names=out_variables, n.iter=10000)
 
 ## Split output
 out          <- list(params=NULL, predict=NULL, model=ann_pop_model, data=mydat)
@@ -109,7 +113,11 @@ prediction_df      <- data.frame(year = fitting_dat$year,
                                  median_prediction = median_predictions,
                                  upper_prediction = upper_predictions,
                                  lower_prediction = lower_predictions)
-if(VERBOSE){ plot(fitted_model$params) }
+if(VERBOSE){ 
+  plot(fitted_model$params)
+  gelman.diag(mc3_out)
+  heidel.diag(mc3_out)
+  }
 
 
 
