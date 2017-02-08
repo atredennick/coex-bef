@@ -10,7 +10,7 @@ header-includes:
 - \usepackage{wrapfig}
 - \usepackage[font={footnotesize,it}]{caption}
 - \usepackage{floatrow}
-- \usepackage{tgtermes}
+- \usepackage{palatino}
 layout: 11pt
 linkcolor: black
 output:
