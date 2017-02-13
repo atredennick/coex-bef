@@ -31,15 +31,17 @@ urlcolor: black
 
 \noindent{}\textbf{Principle Investigator}
 
-Lawrence Venable (PI). Professor, Department of Ecology and Evolutionary Biology, University of Arizona. Venable is a plant population and community ecologist who will provide the focal data sets, will supervise the use of the demographic data and modeling, and will play a major role in supervising the research.
+
 \vspace{0.5em}
 
 \noindent{}\textbf{All Other Personnel}
 
-Andrew Tredennick (Postdoctoral Researcher). Postdoctoral Fellow, Department of Wildland Resources and the Ecology Center, Utah State University. Tredennick is a quantitative ecologist who will lead all aspects of the proposed work, including: developing theory, fitting dynamic population models to data, and simulating the population models to test theoretical predictions.
+Andrew Tredennick (Postdoctoral Researcher; PI?). Postdoctoral Fellow, Department of Wildland Resources and the Ecology Center, Utah State University. Tredennick is a quantitative ecologist who will lead all aspects of the proposed work, including: developing theory, fitting dynamic population models to data, and simulating the population models to test theoretical predictions.
 \vspace{1em}
 
 Jennifer Gremer (Senior Personnel). Assistant Professor, Department of Evolution and Ecology, University of California at Davis. Gremer is a quantitative population ecologist who will provide expertise with the focal data sets and associated population modeling.
+
+Lawrence Venable (Senior Personnel). Professor, Department of Ecology and Evolutionary Biology, University of Arizona. Venable is a plant population and community ecologist who will provide the focal data sets, will supervise the use of the demographic data and modeling, and will play a major role in supervising the research.
 
 \newpage{}
 
@@ -74,7 +76,7 @@ Fluctuation-depedent coexistence comes in two flavors: the storage effect and re
 \begin{wrapfigure}[23]{r}{0.45\textwidth}
   \centering
      \includegraphics[height=2in]{../figures/coex-bef_concept-01.png}
-  \caption{An integrated theory to understand the net effect of environmental variability on ecosystem stability. Coexistence theory (in orange bubble) has focused on how environmental variability can maintain diversity by stabilizing species coexistence, while diversity-stability theory (in blue bubble) has focused on the effect of species richness on ecosystem stability. In combination, environmental variability will decrease ecosystem stability, but it may also increase species richness, which can then increase ecosystem stability. We propose new theory and empirical tests to understand the full effect of environmental variability when it also promotes diversity.}
+  \caption{An integrated theory to understand the net effect of environmental variability on ecosystem stability. \textcolor{orange}{Coexistence theory} has focused on how environmental variability can maintain diversity by stabilizing species coexistence, while \textcolor{blue}{diversity-stability theory} has focused on the effect of species richness on ecosystem stability. In combination, environmental variability will decrease ecosystem stability, but it may also increase species richness, which increases ecosystem stability. We propose new theory and empirical tests to understand the full effect of environmental variability when it also promotes diversity.}
 \end{wrapfigure}
 
 More text here...
